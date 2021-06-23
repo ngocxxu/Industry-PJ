@@ -1,0 +1,141 @@
+.footer {
+    background-color: #000;
+    padding: sp('spacing-11') 0;
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        @include mobile{
+            display: block;
+        }
+        @include tablet2{
+            display: block;
+        }
+        &-item {
+            li {
+                list-style: none;
+                padding-bottom: 0.8rem;
+
+                a {
+                    text-decoration: none;
+                    color: c('gray');
+                }
+            }
+
+            h4 {
+                color: #fff;
+                padding-bottom: 1rem;
+            }
+        }
+
+        &-item.item1 {
+            width: 35%;
+            @include mobile{
+                width: 100%;
+            }
+            @include tablet2{
+                width: 100%;
+            }
+            a {
+                color: #fff;
+
+                i {
+                    color: c('orange');
+                }
+            }
+            p {
+                color: c('gray');
+                margin-right: 5rem;
+                margin-top: 1rem;
+            }
+            .footer__list-item-icon {
+                p {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border-radius: 50%;
+                    text-align: center;
+                    background-color: rgba(128, 128, 128, 0.219);
+                    line-height: 2.5rem;
+                    margin-right: 1rem;
+
+                    i {
+                        color: #fff;
+                    }
+                }
+                p:hover{
+                    background-color: c('orange');
+                    transition: all 0.2s ease-in-out;
+                }
+
+            }
+        }
+
+        &-item.item2 {
+            width: 20%;
+            @include mobile{
+                width: 100%;
+            }
+            @include tablet2{
+                width: 100%;
+            }
+
+
+        }
+
+        &-item.item3 {
+            width: 20%;
+            @include mobile{
+                width: 100%;
+            }
+
+        }
+
+        &-item.item4 {
+            width: 25%;
+            @include mobile{
+                width: 100%;
+            }
+            @include tablet2{
+                width: 100%;
+            }
+
+
+            form {
+                position: relative;
+                margin-bottom: 1rem;
+                display:flex;
+
+
+
+                input {
+                    width: 18rem;
+                    height: 3rem;
+                }
+
+                input:focus {
+                    outline: none;
+                }
+
+                button {
+                    width: 4rem;
+                    height: 3rem;
+                    background-color: c('orange');
+                    border: none;
+
+                    i {
+                        font-size: 1.2rem;
+                        color: #fff;
+                    }
+
+                }
+
+            }
+
+            p {
+                color: c('gray');
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,96 @@
+.survey {
+    padding: sp('spacing-12');
+    @include mobile{
+        padding: 0;
+
+    }
+
+    &__content {
+        display: flex;
+        @include mobile{
+            display:block;
+
+        }
+        @include tablet2{
+            display: block;
+        }
+
+
+        &-text {
+            width: 50%;
+            @include mobile{
+                width: 100%;
+                margin: 2rem 0;
+            }
+            @include tablet2{
+                width: 100%;
+                margin: 2rem 0;
+            }
+            
+            h1 {
+                span {
+                    color: c('orange');
+                }
+            }
+
+            p {
+                color: c('gray');
+                padding: sp('spacing-6') 0;
+            }
+
+            button {
+                @include buttonClick('spacing-7', 'orange');
+            }
+            button:hover{
+                background-color: #000;
+                transition: all 0.2s ease-in-out;
+            }
+
+        }
+
+        &-img {
+           
+            img {
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 10rem;
+                border-bottom-left-radius: 10rem;
+                border-bottom-right-radius: 1rem;
+                max-width: 100%;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            }
+        }
+    }
+    &__number{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1rem;
+        text-align: center;
+        // place-items: center;
+        padding-top: sp('spacing-12');
+        @include mobile{
+            display:block;
+
+        }
+        @include tablet2{
+            display: block;
+        }
+
+
+        &-item{
+            background-color: c('orange-300');
+            padding: sp('spacing-5') 0;
+            border-radius: 0.3rem;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            @include mobile{
+                margin-bottom: 2rem;
+            }
+            @include tablet2{
+                margin-bottom: 2rem;
+            }
+    
+            i{
+                font-size: 2.5rem;
+            }
+        }
+    }
+}

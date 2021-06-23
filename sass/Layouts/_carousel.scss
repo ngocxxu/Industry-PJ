@@ -1,0 +1,60 @@
+.carousel-main{
+    .carousel{
+        &-indicators{
+            li{
+                width: 1.2rem;
+                height: 1.2rem;
+                border-radius:50%;
+            }
+        }
+        &-inner{
+            .carousel-item{
+                position: relative;
+                .carousel-caption{
+                    right: initial;
+                    bottom: 35%;
+                    text-align:initial;
+                    @include tablet{
+                        bottom: 10%;
+                        font-size:0.5rem;
+                    }
+                    h1{
+                        font-size: fS('text-2xl');
+                        @include tablet{
+                          font-size:fS('text-xl');
+                      }
+                        @include mobile{
+                          font-size:fS('text-sm');
+                      }
+  
+                    }
+                    p{
+                        font-size: fS('text-md');
+                        opacity: 0.95;
+                        padding: 1.5rem 0;
+                        @include tablet{
+                          font-size:fS('text-sm');
+                      }
+
+                    }
+                    button{
+                        @include buttonClick('spacing-8','orange')
+                    }
+                    button:hover{
+                        background-color: #000;
+                        transition: all 0.2s ease-in-out;
+                    }
+                }
+            }
+            .carousel-item:before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to top, #0000008f, transparent);  
+            }
+        }
+    }
+}

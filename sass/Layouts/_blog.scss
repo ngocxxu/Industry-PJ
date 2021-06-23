@@ -1,0 +1,50 @@
+.blog{
+    background-color: c('bg-light');
+    padding: sp('spacing-12') 0;
+
+    &__text{
+        text-align:center;
+        h5{
+            color: c('gray');
+        }
+        span{
+            color: c('orange');
+        }
+    }
+    &__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mobile{
+            display: block;
+        }
+        .blog__item{
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            &-img{
+                img{
+                    max-width: 100%;
+                }
+            }
+            &-content{
+                padding-top: 1rem;
+                p{
+                    color: c('gray');
+                    i{
+                        color: c('orange');
+                    }
+                }
+                button{
+                    @include buttonClick('spacing-7','orange')
+                }
+                button:hover{
+                    background-color: #000;
+                    transition: all 0.2s ease-in-out;
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+//Helpers
+@import '../Helpers/variables';
+
+@function c($valC) {
+    @if map-has-key($map: $color, $key: $valC) {
+        @return map-get($map: $color, $key: $valC);
+    }
+
+    @return 'invalid key';
+}
+
+@function fS($valFS) {
+    @if map-has-key($map: $fontSize, $key: $valFS) {
+        @return map-get($map: $fontSize, $key: $valFS);
+    }
+
+    @return 'invalid key';
+}
+
+@function fW($valFW) {
+    @if map-has-key($map: $fontWeight, $key: $valFW) {
+        @return map-get($map: $fontWeight, $key: $valFW);
+    }
+
+    @return 'invalid key';
+}
+
+@function sp($valSP) {
+    @if map-has-key($map: $spacing, $key: $valSP) {
+        @return map-get($map: $spacing, $key: $valSP);
+    }
+
+    @return 'invalid key';
+}
+
+.changeColorNavbar {
+    color: red;
+}
+.dark-mode {
+    background-color: #171717;
+    color: #fff;
+}
+.dark-mode-sun {
+    color: #fff !important;
+}
+.dark-mode-blackText {
+    color: #000 !important;
+}
+.dark-mode-bg {
+    background-color: #100f19 !important;
+    fill: #151421 !important;
+}
